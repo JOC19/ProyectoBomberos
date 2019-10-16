@@ -1,0 +1,394 @@
+/*--- -------Mis Estilos------ ----*/
+*
+{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face
+{
+    font-family: garamond;
+    src: url(../Fuentes/EBGaramond-Italic.ttf)
+}
+
+body
+{
+    
+    font-size: 14px;
+    font-family: garamond;
+}
+
+.Contenedor
+{
+    width: 100%;
+    margin: auto;
+
+    /*----Gird------*/
+    display: grid;
+    grid-gap: 4px;
+    grid-template-areas:
+    "log log log"
+    "head head head" 
+    "ang ang ang"
+    "foot foot foot";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.ContLogo
+{   
+    padding: 14px;   
+    grid-area: log;
+    background: #f2f2f2;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+
+    /*----FlexBox------*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo img
+{
+    width: 150px;
+}
+
+.LogoSec img
+{
+    width: 100px;
+}
+
+.Udo img
+{
+    width: 330px;
+}
+
+/*--- -------Inicio-Header------ ----*/
+.Header
+{
+    width: 100%;
+    padding: 5px;
+    grid-area: head;
+    background: #dd2c00;
+    box-shadow: 0 0 1px rgb(0, 0, 0);
+
+    /*----FlexBox------*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/*---------Menu----------*/
+.menu_bar 
+{
+	display: none;
+}
+
+.Header .NavM
+{
+    width: 70%;
+    z-index: 1000;   
+}
+
+.form-inline
+{
+    width: 25%;
+
+    /*----FlexBox------*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Header .NavM ul 
+{
+    width: 100%;    
+    margin: auto;
+    list-style: none;
+}
+
+.Header .NavM ul li 
+{
+	position: relative;
+	display: inline-block;
+}
+
+.Header .NavM ul li:hover
+{
+    border-radius: 5px;
+	background: #f2f2f2d3;
+}
+
+.Header .NavM ul li a:hover
+{
+    border-radius: 5px;
+	background: #010101d0;
+}
+
+.Header .NavM ul li a 
+{
+    padding: 10px;
+	display: block;
+	color: #f2f2f2;
+    border-radius: 5px;
+	text-decoration: none;
+    background: #313131;
+}
+
+.Header .NavM ul li a span
+{
+	margin-right: 10px;
+}
+
+.Header .NavM ul li:hover .children
+{
+	display: block;
+}
+
+.Header .NavM ul li .children
+{
+    width: 150%;
+	display: none;
+	z-index: 1000;
+	position: absolute;
+	background: #313131;
+}
+
+.Header .NavM ul li .children li
+{
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.Header .NavM ul li .children li a 
+{
+	display: block;
+}
+
+.Header .NavM ul li .children li a span 
+{
+	float: right;
+	position: relative;
+	top: 3px;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.Header .NavM ul li .caret
+{
+	position: relative;
+	top: 3px;
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+/*--- -------Media-Query------ ----*/
+@media screen and (max-width: 1220px)
+{
+    .Header
+    {
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .Header .NavM
+    {
+        width: 100%;
+        padding: 4px;
+    }
+
+    .Header .NavM ul
+    {
+        grid-gap: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-inline
+    {
+        width: 100%;
+        padding: 4px;
+
+        /*----FlexBox------*/
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 880px) 
+{
+    body 
+    {
+		padding-top: 80px;/*--- -------Modificar------ ----*/
+	}
+
+    .menu_bar 
+    {
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		background: #E6344A;
+	}
+
+    .menu_bar .bt-menu 
+    {
+        padding: 20px;
+		color: #fff;
+		display: block;
+		font-size: 25px;
+		overflow: hidden;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+    .menu_bar span 
+    {
+		float: right;
+		font-size: 40px;
+	}
+
+    .Header .NavM
+    {
+		margin: 0;
+		width: 80%;
+		right: 100%;
+		position: fixed;
+		overflow: scroll;
+		height: calc(100% - 80px);
+	}
+
+    .Header .NavM ul li 
+    {
+		display: block;
+		border-bottom: 1px solid rgba(255,255,255,.5);
+	}
+
+    .Header .NavM ul li a 
+    {
+		display: block;
+	}
+
+    .Header .NavM ul li:hover .children 
+    {
+		display: none;
+	}
+
+    .Header .NavM ul li .children 
+    {
+		width: 100%;
+		position: relative;
+	}
+
+    .Header .NavM ul li .children li a 
+    {
+		margin-left: 20px;
+	}
+
+    .Header .NavM ul li .caret 
+    {
+		float: right;
+	}
+}/*--- -------Fin-Query------ ----*/
+/*--------Fin-Menu-------*/
+/*--- -------Fin-Header------ ----*/
+
+/*--- -------Inicio-Seccion------ ----*/
+.Seccion
+{
+    width: 50%;
+    margin: auto;
+    grid-area: ang;
+    background: #0b409c;
+
+    /*----FlexBox------*/
+    display: flex;    
+    align-items: center;   
+}
+
+.DivSec
+{
+    width: 99%;
+    margin: 4px auto; 
+    color: #f2f2f2;
+    text-align: center;
+    background: #fafafa;
+    box-shadow: 0 0 1px rgb(0, 0, 0);
+
+    /*----FlexBox------*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2, h3
+{
+    color: #313131;
+}
+
+
+.DivSec form
+{
+    width: 50%;
+
+    /*----FlexBox------*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;    
+    justify-content: space-between;
+}
+
+.DivSec form .form-group
+{
+    width: 100%;
+}
+
+.DivSec .BotonEnviar
+{
+    width: 40%;
+    margin: 4px;
+}
+
+.DivSec.BotonEnviar .btn
+{
+    width: 100%;
+}
+/*--- -------Fin-Seccion------ ----*/
+
+.Footer
+{
+    grid-area: footer;
+    width: 100%;
+    margin: auto;
+    padding: 14px;
+    color: #f2f2f2;
+    background: #313131;
+
+    /*----FlexBox------*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Footer .FooterContacto
+{
+    width: 20%;
+    padding: 2px;
+    text-align: center;
+    border-radius: 2px;
+    color: #f2f2f2;
+    background: #f2f7ff18;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+}
+
+hr
+{
+    background: #f2f2f2;
+}
+
+
+

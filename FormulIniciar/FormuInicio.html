@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/EstilosInicio.css">
+    <script src="js/fontawesome-all.js"></script>
+    <title>Iniciar Sesión</title>
+  </head>
+  
+  <body>
+    
+    <header class="ContenedorHeader">
+      <div class="ContenedorDivHeader">
+        
+        <div class="Logo">
+          <img src="Img/Edicion7.png" alt="">
+        </div>
+
+        <div class="Titulo">
+          <img src="Img/Edicion-1.1.png" alt="">
+        </div>
+
+        <nav>
+          <ul>            
+            <li><a href="../index.html"><span><i class="fas fa-home"></i></span>Inicio</a></li>
+          </ul>
+        </nav>        
+
+      </div>      
+    </header>
+
+    <div class="ContenedorFormulario">
+      <div class="wrap">
+        <form action="validar.php" class="formulario" name="formulario_registro" method="post">
+          
+          <div class="SpanUsuario">
+            <span class="fas fa-user-circle"></span>
+          </div>
+          
+          <div class="input-group">
+            <input type="email" id="correo" name="correo">
+            <label class="label" for="correo">Correo:</label>
+          </div>
+          
+          
+          <div class="input-group">
+            <input type="password" id="password" name="password">
+            <label class="label" for="pass">Contraseña:</label>
+          </div>
+
+          <input type="submit" id="btn-submit" value="Enviar">
+          
+        </form>
+      </div>
+    </div>
+
+    <script src="js/formulario.js"></script>
+  </body>
+</html>

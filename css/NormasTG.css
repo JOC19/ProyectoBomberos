@@ -1,0 +1,366 @@
+/*--- -------Mis Estilos------ ----*/
+*
+{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Contenedor
+{
+    width: 100%;
+    margin: auto;
+
+    /*----Gird------*/
+    display: grid;
+    grid-gap: 4px;
+    grid-template-areas:
+    "log log log"
+    "head head head" 
+    "aside ang ang"
+    "foot foot foot";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.ContLogo
+{   
+    padding: 14px;   
+    grid-area: log;
+    background: #f2f2f2;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+
+    /*----FlexBox------*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo img
+{
+    width: 150px;
+}
+
+.LogoSec img
+{
+    width: 100px;
+}
+
+.Udo img
+{
+    width: 330px;
+}
+
+/*--- -------Inicio-Header------ ----*/
+.Header
+{
+    width: 100%;
+    padding: 5px;
+    grid-area: head;
+    background: #dd2c00;
+    box-shadow: 0 0 1px rgb(0, 0, 0);
+
+    /*----FlexBox------*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/*---------Menu----------*/
+.menu_bar 
+{
+	display: none;
+}
+
+.Header .NavM
+{
+    width: 100%;
+    z-index: 1000;   
+}
+
+.form-inline
+{
+    width: 40%;
+
+    /*----FlexBox------*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Header .NavM ul 
+{
+    width: 100%;    
+    margin: auto;
+    list-style: none;
+}
+
+.Header .NavM ul li 
+{
+	position: relative;
+	display: inline-block;
+}
+
+.Header .NavM ul li:hover
+{
+    border-radius: 5px;
+	background: #f2f2f2d3;
+}
+
+.Header .NavM ul li a:hover
+{
+    border-radius: 5px;
+	background: #010101d0;
+}
+
+.Header .NavM ul li a 
+{
+    padding: 10px;
+	display: block;
+	color: #f2f2f2;
+    border-radius: 5px;
+	text-decoration: none;
+    background: #313131;
+}
+
+.Header .NavM ul li a span
+{
+	margin-right: 10px;
+}
+
+.Header .NavM ul li:hover .children
+{
+	display: block;
+}
+
+.Header .NavM ul li .children
+{
+    width: 150%;
+	display: none;
+	z-index: 1000;
+	position: absolute;
+	background: #313131;
+}
+
+.Header .NavM ul li .children li
+{
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.Header .NavM ul li .children li a 
+{
+	display: block;
+}
+
+.Header .NavM ul li .children li a span 
+{
+	float: right;
+	position: relative;
+	top: 3px;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.Header .NavM ul li .caret {
+	position: relative;
+	top: 3px;
+	margin-left: 10px;
+	margin-right: 0px;
+}
+
+/*--- -------Media-Query------ ----*/
+@media screen and (max-width: 1460px)
+{
+    .Header
+    {
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .Header .NavM
+    {
+        width: 100%;
+        padding: 4px;
+    }
+
+    .Header .NavM ul
+    {
+        grid-gap: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-inline
+    {
+        width: 100%;
+
+        /*----FlexBox------*/
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 800px) 
+{
+    body 
+    {
+		padding-top: 80px;/*--- -------Modificar------ ----*/
+	}
+
+    .menu_bar 
+    {
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		background: #E6344A;
+	}
+
+    .menu_bar .bt-menu 
+    {
+        padding: 20px;
+		color: #fff;
+		display: block;
+		font-size: 25px;
+		overflow: hidden;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+    .menu_bar span 
+    {
+		float: right;
+		font-size: 40px;
+	}
+
+    .Header .NavM
+    {
+		margin: 0;
+		width: 80%;
+		right: 100%;
+		position: fixed;
+		overflow: scroll;
+		height: calc(100% - 80px);
+	}
+
+    .Header .NavM ul li 
+    {
+		display: block;
+		border-bottom: 1px solid rgba(255,255,255,.5);
+	}
+
+    .Header .NavM ul li a 
+    {
+		display: block;
+	}
+
+    .Header .NavM ul li:hover .children 
+    {
+		display: none;
+	}
+
+    .Header .NavM ul li .children 
+    {
+		width: 100%;
+		position: relative;
+	}
+
+    .Header .NavM ul li .children li a 
+    {
+		margin-left: 20px;
+	}
+
+    .Header .NavM ul li .caret 
+    {
+		float: right;
+	}
+}/*--- -------Fin-Query------ ----*/
+/*--------Fin-Menu-------*/
+/*--- -------Fin-Header------ ----*/
+
+/*--- -------Inicio-Aside------ ----*/
+.Aside
+{    
+    grid-area: aside;
+    background: #0b409c;
+
+    /*----FlexBox------*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Aside .AsideImg
+{
+    width: 100%;
+    padding: 5px;
+
+
+    /*----FlexBox------*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*--- -------Fin-Aside------ ----*/
+
+.Seccion
+{
+    height: 50vh;
+    grid-area: ang;
+    background: #E6344A;
+
+    /*----FlexBox------*/
+}
+
+.SeccionDiv
+{
+    width: 90%;    
+    margin: auto;
+    text-align: center;
+    background: #0b409c;
+}
+
+.Footer
+{
+    width: 100%;
+    margin: auto;
+    padding: 14px;
+    color: #f2f2f2;
+    font-size: 12px;
+    grid-area: footer;
+    background: #313131;
+
+    /*----FlexBox------*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Footer .FooterContacto
+{
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+    border-radius: 2px;
+    color: #f2f2f2;
+    background: #f2f7ff18;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+}
+
+.Footer .FooterContacto .ArticleContacto
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+hr
+{
+    background: #f2f2f2;
+}

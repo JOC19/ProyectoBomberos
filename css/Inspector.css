@@ -1,0 +1,410 @@
+/*--- -------Mis Estilos------ ----*/
+*
+{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face
+{
+    font-family: garamond;
+    src: url(../Fuentes/EBGaramond-Italic.ttf)
+}
+
+body
+{
+    font-size: 5px;
+    font-family: garamond;
+    background: #dd2c00;
+}
+
+.Contenedor
+{
+    width: 100%;
+    margin: auto;
+
+    /*----Gird------*/
+    display: grid;
+    grid-gap: 5px;        
+    grid-template-areas:
+    "logo logo logo"
+    "header header header"
+    "per per per"
+    "aside secc secc"
+    "foot foot foot";
+
+    /*------Ancho de ocupacion de Cada Columna y Filas------*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:1fr;
+}
+
+.ContLogo
+{   
+    grid-area: logo;
+    padding: 14px;   
+    background: #f2f7ff;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+
+    /*----FlexBox------*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.Logo img
+{
+    width: 150px;
+}
+
+.Udo img
+{
+    width: 330px;
+}
+
+@media screen and (max-width: 700px)
+{
+    .ContLogo
+    {
+        padding: 5px;
+        grid-gap: 20px;   
+        /*----FlexBox------*/
+        display: flex;
+        flex-direction: column;        
+    }
+
+
+    .Logo img
+    {   
+    width: 100px;
+    }
+
+    .Udo img
+    {
+    width: 250px;
+    }
+}
+
+/*--- -------Inicio-Header------ ----*/
+.menu_bar 
+{
+    display: none;
+    z-index: 1000;
+}
+
+.Header
+{
+    grid-area: header;
+    width: 100%;
+    padding: 2px;
+    background: #dd2c00;
+    box-shadow: 0 0 1px rgb(0, 0, 0);   
+}
+
+.Header .HeaderNav
+{
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.Header .HeaderNav ul 
+{
+    margin: 2px auto;
+    list-style: none;
+}
+
+.Header .HeaderNav ul li 
+{
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.Header .HeaderNav ul li a:hover
+{
+    color: #f2f2f2;
+	background: #2b2a2a;
+}
+
+.Header .HeaderNav ul li a 
+{
+    padding: 10px;
+    cursor: pointer;
+	display: block;
+	color: #f2f2f2;
+    border-radius: 5px;
+	text-decoration: none;
+    background: #313131;
+}
+
+.Header .HeaderNav ul li a span
+{
+    color: #f2f2f2;
+	margin-right: 10px;
+}
+
+.Header .HeaderNav ul li:hover .children
+{
+	display: block;
+}
+
+.Header .HeaderNav ul li .children
+{
+    width: 150%;
+	display: none;
+	z-index: 1000;
+	position: absolute;
+	background: #313131;
+}
+
+.Header .HeaderNav ul li .children li
+{
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+.Header .HeaderNav ul li .children li a 
+{
+	display: block;
+}
+
+.Header .HeaderNav ul li .children li a span 
+{
+	top: 3px;
+	float: right;
+	margin-right: 0;
+	position: relative;
+	margin-left: 10px;
+}
+
+.Header .HeaderNav ul li .caret
+{    
+    top: 0;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+
+/*--- -------Media-Query------ ----*/
+
+@media screen and (max-width: 950px)
+{
+
+    /*.Header .HeaderNav
+    {
+        /*----FlexBox------*/
+        /*display: flex;
+        flex-direction: row;
+        align-items: center;       
+        justify-content: center;
+    
+    }*/
+    
+}
+
+@media screen and (max-width: 840px)
+{
+    .menu_bar 
+    {
+        top: 0;
+        width: 40px;              
+        right: 12px;
+        margin: 2px;
+		display: block;
+        position: fixed;
+        cursor: pointer; 	
+        border-radius: 5px;
+        background: #313131e3;
+    }
+
+    .menu_bar .bt-menu
+    {
+		display: block;
+		padding: 10px;
+        overflow: hidden;
+        
+		text-decoration: none;
+    }
+    
+    .menu_bar .bt-menu span
+    {
+        font-size: 20px;
+        color: #f2f7ff;
+    }
+
+    .menu_bar span 
+    {
+		float: right;
+		font-size: 25px;
+	}
+
+    .Header .HeaderNav
+    {
+        width: 75%;
+        height: 100%;
+		position: fixed;
+		right: 100%;
+        top: 0;
+        overflow: scroll;
+        background: #313131;
+
+        /*----FlexBox------*/
+
+        
+    }
+
+    .Header .HeaderNav ul li 
+    {
+		display: block;
+		border-bottom: 1px solid rgb(221, 44, 0);
+	}
+
+    .Header .HeaderNav ul li a 
+    {
+		display: block;
+	}
+
+    .Header .HeaderNav ul li:hover .children 
+    {
+		display: none;
+	}
+
+    .Header .HeaderNav ul li .children 
+    {
+		width: 100%;
+		position: relative;
+	}
+
+    .Header .HeaderNav ul li .children li a 
+    {
+		margin-left: 20px;
+	}
+
+    .Header .HeaderNav ul li .caret 
+    {
+		float: right;
+	}
+}/*--- -------Fin-Query------ ----*/
+/*--------Fin-Menu-------*/
+/*--- -------Fin-Header------ ----*/
+
+/*--- -------Perfil------ ----*/
+.Perfil
+{
+    grid-area: per;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.Historial
+{
+    margin: auto;
+    text-align: center;
+}
+
+.foto
+{
+    margin: auto;
+    text-align: center;
+}
+
+.foto span .fa-user-circle
+{
+    width: 200px;
+}
+/*--- -------Fin-perfil------ ----*/
+
+/*--- -------Inicio-Aside----- ----*/
+.Aside
+{
+    grid-area: aside;
+    background: #f2f2f2;
+    width: 100%;
+
+}
+/*--- -------FIN-Aside----- ----*/
+
+/*--- -------Inicio-Seccion----- ----*/
+.Seccion
+{
+    grid-area: secc;
+    grid-gap: 20px;
+    width: 100%;
+    background: #dd2c00;
+}
+
+.Funciones
+{
+
+    margin: auto;
+    text-align: center;
+}
+
+/*--- -------Fin-Seccion----- ----*/
+
+
+/*--- -------INICIO-FOOTER------ ----*/
+.Footer
+{
+    grid-area: foot;
+    color: #f2f2f2;
+    background: #313131;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+
+    /*----FlexBox------*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FooterContacto1
+{
+    width: 400px;
+    margin: 20px;
+    padding: 4px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 2px;
+    color: #f2f2f2;
+    background: #f2f7ff00;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+}
+
+.FooterContacto2
+{
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 2px;
+    color: #f2f2f2;
+    background: #f2f7ff00;
+    box-shadow:0 0 1px rgb(0, 0, 0);
+}
+
+.Footer .LinkSocial
+{
+    margin: 20px;
+}
+
+
+
+@media screen and (max-width: 700px)
+{
+    .Footer
+    {
+        grid-gap: 10px;
+        /*----FlexBox------*/
+        display: flex;        
+        flex-direction: column;
+    }
+}
+/*--- -------FIN-FOOTER------ ----*/

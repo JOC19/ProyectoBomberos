@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Registrar Usuario</title>
+  </head>
+  
+  <body>
+    
+    <div class="ContLogo">
+      <div class="Logo">
+         <img src="../Img/Edicion7.png" alt="">
+      </div>
+      
+      <div class="Udo">
+        <img src="../Img/EdicionOriginal-2.png" alt="">
+      </div>
+        
+      <div class="LinkSocial">
+        <nav class="Navegacion">
+          <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-facebook-square"></i></a>
+          <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-twitter-square"></i></a>
+          <a class="btn btn-dark btn-sm" href="#"><i class="fas fa-envelope"></i></a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="ContenedorFormulario">
+      <div class="wrap">
+        <form action="registro.php" class="formulario" name="formulario_registro" method="post">
+          
+          <div class="input-group">
+            <input type="text" id="nombre" name="nombre">
+            <label class="label" for="nombre">Nombre y Apellido:</label>
+          </div>
+          
+          
+          <div class="input-group">
+            <input type="email" id="correo" name="correo">
+            <label class="label" for="correo">Correo:</label>
+          </div>
+          
+          
+          <div class="input-group">
+            <input type="password" id="password" name="password">
+            <label class="label" for="pass">Contraseña:</label>
+          </div>
+           
+          
+          <div class="input-group">
+            <input type="password" id="pass2" name="pass2">
+            <label class="label" for="pass2">Repetir Contraseña:</label>
+          </div>
+          
+          
+          <div class="input-group radio">
+            <input type="radio" name="sexo" id="hombre" value="Hombre">
+            <label for="hombre">Hombre</label>
+  
+            <input type="radio" name="sexo" id="mujer" value="Mujer">
+            <label for="mujer">Mujer</label>
+          </div>
+          
+          
+          <div class="input-group checkbox" >
+            <input type="checkbox" name="terminos" id="terminos" value="true">
+            <label for="terminos">Acepto los terminos y condiciones</label>
+          </div>
+          
+          <input type="submit" id="btn-submit" value="Enviar">
+          
+        </form>
+      </div>
+
+    </div>
+
+    <!--Inicio-Footer-->
+    <footer class="Footer">
+
+      <div class="FooterContacto">
+        <article class="ArticleUbicacion">
+          <h6><i class="fas fa-street-view"></i> Ubicación:</h6>
+          <p>Av. Universidad, Cerro Colorado, Universidad de Oriente, Núcleo de Sucre, Comandancia General, Cumaná Estado Sucre-Venezuela.</p>
+        </article>
+      </div>
+    
+      <div class="FooterContacto">
+        <article class="ArticleContacto">
+          <h6><i class="fas fa-phone-volume"></i>Teléfonos: </h6>
+          <p>0293-4002231 / 642-7352</p>
+          <h6>Fax:</h6>
+          <p>451797</p>
+          <h6>Código Postal: </h6>
+          <p>6101</p>                       
+        </article>
+      </div>
+    
+      <div class="LinkSocial">
+        <nav class="Navegacion">
+          <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-facebook-square"></i> Faceboock</a>
+          <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+          <a class="btn btn-dark btn-sm" href="#"><i class="fas fa-envelope"></i> Correo</a>
+        </nav>
+      </div>
+      
+    </footer>
+    <!--Fin-Footer-->
+
+    <script src="js/formulario.js"></script>
+  </body>
+</html>

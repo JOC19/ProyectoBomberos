@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../Administrador/css/PlanillaRecoleccionDatos.css">
+    <link rel="stylesheet" href="../css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <title>Cuerpos de Bomberos</title>
+  </head>
+  <body>
+
+    <main class="Contenedor">
+
+      <div class="ContLogo">
+        <div class="Logo">
+          <img src="../Img/Edicion7.png" alt="">
+        </div>
+      
+        <div class="Udo">
+          <img src="../Img/EdicionOriginal-2.png" alt="">
+        </div>
+        
+        <div class="LinkSocial">
+          <nav class="Navegacion">
+            <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-facebook-square"></i></a>
+            <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-twitter-square"></i></a>
+            <a class="btn btn-dark btn-sm" href="#"><i class="fas fa-envelope"></i></a>
+          </nav>
+        </div>
+      </div>    
+      
+      <!--header-->
+      <header class="Header">
+        <div class="menu_bar">
+            <a class="bt-menu"><span class="icono fa fa-bars"></span></a>
+        </div>         
+        <nav class="HeaderNav">
+          <ul>
+            <li><a href="/index.html"><span class="fas fa-home"></span>Inicio</a></li>
+            
+            <li class="submenu">
+              <a><span class="fas fa-users"></span>Inspección<span class="caret fas fa-caret-down"></span></a>
+              <ul class="children">
+                <li><a href="mision.html">Asignación <span class="fas fa-eye"></span></a></li>                
+              </ul>
+            </li>
+
+            <li class="submenu">
+              <a><span class="fas fa-paste"></span>Normas Técnicas<span class="caret fas fa-caret-down"></span></a>
+              <ul class="children">                
+                <li><a href="#">V. Covenin Especificas <span class="fas fa-file-alt"></span></a></li>
+              </ul>
+            </li>
+
+            <li><a href="FormularioRegistro/Formulario.html"><span class="fas fa-user"></span>Notificacion</a></li>
+
+            <li class="submenu">
+              <a><span class="fas fa-paste"></span>Gestionar<span class="caret fas fa-caret-down"></span></a>
+              <ul class="children">                
+                <li><a href="/Administrador/CrearUsuario.html">Usuario <span class="fas fa-file-alt"></span></a></li>
+                <li><a href="/Administrador/Noticias.html">Noticias <span class="fas fa-file-alt"></span></a></li>                
+                <li><a href="#">Plano <span class="fas fa-file-alt"></span></a></li>
+              </ul>
+            </li>
+
+            <li><a href="FormularioRegistro/Formulario.html"><span class="fas fa-user"></span>Cerrar Sesión</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--FIN header-->
+
+       <!--Inicio-Seccion-->
+       <section class="Seccion">  
+         
+        <div class="Escudo">
+          <img src="../Img/escudo.png" alt="">
+          <p>
+            UNIVERSIDAD DE ORIENTE
+            <br>
+            CUERPO DE BOMBEROS UNIVERSITARIOS
+            <br>
+            COMANDO
+            <br>
+            DIVISIÓN DE NORMALIZACIÓN
+          </p>
+          <h1>Planilla de Recolección de Datos</h1>
+        </div>
+        <div class="ContenedorFormulario">
+          <div class="wrap">
+            <form action="registro.php" class="formulario" name="formulario_registro" method="post">
+                <div class="Definicion">
+                    <u><h4>26. Existen algún Tipo de sistema mencionados encima de la cubierta falsa (Cielo Raso).</h4></u>                
+                </div>                
+                <div class="InpuLabel">
+                    <div class="input-group radio">
+                        <input type="radio" name="Check_1_0" id="Nat_1_0" value="1">
+                        <label for="Nat_1_0">Instalaciones Eléctricas</label>
+                  
+                        <input type="radio" name="Check_1_1" id="Si_1_2" value="1">
+                        <label for="Si_1_2">Empotrado Si</label>
+
+                        <input type="radio" name="Check_1_1" id="No_1_2" value="0">
+                        <label for="No_1_2">Empotrado No</label>
+                    </div>
+                </div>
+
+                <div class="InpuLabel">
+                    <div class="input-group radio">
+                        <input type="radio" name="Check_1_0" id="Art_1_0" value="1">
+                        <label for="Art_1_0">Detectores de Incendios</label>
+                      
+                        <input type="radio" name="Check_1_1" id="Si_1_3" value="1">
+                        <label for="Si_1_3">Si Funciona</label>
+    
+                        <input type="radio" name="Check_1_1" id="No_1_3" value="0">
+                        <label for="No_1_3">No Funciona</label>
+                    </div>
+                </div>
+
+                <div class="InpuLabel">
+                    <div class="input-group radio">                        
+                        <input type="radio" name="Check_1_2" id="Si_1_4" value="1">
+                        <label for="Si_1_4">Sistema de Ducto para Aire Acondicionado</label>                        
+                        
+                        <input type="radio" name="Check_1_2" id="No_1_4" value="1">
+                        <label for="No_1_4">Sistema de Aguas Blancas</label>
+
+                        <input type="radio" name="Check_1_2" id="No_1_4" value="1">
+                        <label for="No_1_4">Sistema de Aguas Negras</label>
+
+                        <input type="radio" name="Check_1_2" id="Si_1_5" value="1">
+                        <label for="Si_1_5">Sistema de Cableado para Comunicación de Voz o Datos</label>
+                    </div>
+                </div>
+
+                <div class="InpuLabel">
+                  <div class="input-group">
+                    <input type="text" id="nombre" name="nombre">
+                    <label class="label" for="nombre">Otros:</label>
+                  </div>
+                  
+                  <div class="input-group radio">           
+                    <input type="radio" name="Check_1_1" id="Si_1_3" value="1">
+                    <label for="Si_1_3">Si Funciona</label>
+  
+                    <input type="radio" name="Check_1_1" id="No_1_3" value="0">
+                    <label for="No_1_3">No Funciona</label>
+                  </div>
+                </div>
+
+                <div class="InpuLabel">
+                  <div class="input-group">
+                    <input type="text" id="nombre" name="nombre">
+                    <label class="label" for="nombre">Lugar:</label>
+                  </div>
+                    
+                  <div class="input-group">
+                    <input type="text" id="nombre" name="nombre">
+                    <label class="label" for="nombre">Fecha:</label>
+                  </div>
+                </div>                        
+                  
+                
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Obsevacion</span>
+                  </div>
+                  <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+
+                <hr>
+                <div class="Navegacion">
+                    <a href="/Administrador/PlanillaRecoleccion2.html"><span class="fa fa-chevron-left">Atras</span></a>
+                    <a href="/Administrador/PlanillaRecoleccion6.html">Siguiente<span class="fa fa-chevron-right"></span></a>
+                </div>                
+                <!--<input type="submit" id="btn-submit" value="Enviar">-->
+            </form>
+          </div>
+        </div>
+      </section>      
+      <!--Fin-Seccion-->
+      
+      <!--Inicio-Footer-->
+      <footer class="Footer">
+        <div class="FooterContacto1">
+          <article class="ArticleUbicacion">
+            <h6><i class="fas fa-street-view"></i> Ubicación:</h6>
+            <p>Av. Universidad, Cerro Colorado, Universidad de Oriente, Núcleo de Sucre, Comandancia General, Cumaná Estado Sucre-Venezuela.</p>
+          </article>
+        </div>
+  
+        <div class="FooterContacto2">
+          <article class="ArticleContacto">
+            <h6><i class="fas fa-phone-volume"></i>Teléfonos: </h6>
+            <p>0293-4002231 / 642-7352</p>
+            <h6>Fax:</h6>
+            <p>451797</p>
+            <h6>Código Postal: </h6>
+            <p>6101</p>                       
+          </article>
+        </div>
+  
+        <div class="LinkSocial">
+          <nav class="Navegacion">
+            <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-facebook-square"></i> Faceboock</a>
+            <a class="btn btn-dark btn-sm" href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+            <a class="btn btn-dark btn-sm" href="#"><i class="fas fa-envelope"></i> Correo</a>
+          </nav>
+        </div>  
+      </footer>
+      <!--Fin-Footer-->
+    </main> 
+    
+    
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/menu.js"></script> 
+    <script src="../FormularioRegistro/js/formulario.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+  </body>
+</html>
